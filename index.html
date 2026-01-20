@@ -27,6 +27,13 @@
 
   <h1 class="city-title">東京</h1>
 
+<div class="tabs">
+  <button class="tab active">景點</button>
+  <button class="tab">美食</button>
+  <button class="tab">住宿</button>
+</div>
+
+  
   <!-- 分類選項 -->
   <div class="tabs">
     <div class="tab active">景點</div>
@@ -39,6 +46,9 @@
 
     <div class="category active">
       <!-- 景點內容 -->
+      麻六甲
+      馬六甲運河遊船
+
     </div>
 
     <div class="category">
@@ -47,6 +57,8 @@
 
     <div class="category">
       <!-- 住宿內容 -->
+      巴生	巴生阿克瑪溫德姆飯店
+
     </div>
 
   </div>
@@ -101,5 +113,21 @@ body {
 .content {
   color: #333;
 }
+
+  /*未選取的按鈕樣式*/
+  .tab {
+  padding: 8px 16px;   /* 內距，讓它好點 */
+  border-radius: 20px; /* 圓一點 */
+  background-color: #f2f2f2;
+  color: #555;
+}
+
+  
+/*選取時的按鈕樣式*/
+  .tab.active {
+  background-color: #ffcf9d;
+  color: #5a3a00;
+}
+
 
 </style>
