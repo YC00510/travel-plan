@@ -1,134 +1,129 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>旅遊行程</title>
+  <title>旅遊行程規劃</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
- 
+  <div class="app">
 
-  <h1 class="city-title">馬來西亞</h1>
+    <!-- 標題 -->
+    <header class="header">
+      <h1>馬來西亞 · Day 1</h1>
+    </header>
 
-<div class="tabs">
-  <button class="tab active">景點</button>
-  <button class="tab">美食</button>
-  <button class="tab">住宿</button>
-</div>
+    <!-- 分類按鈕 -->
+    <div class="tabs">
+      <button class="tab active">景點</button>
+      <button class="tab">美食</button>
+      <button class="tab">住宿</button>
+    </div>
 
-   <div class="app">
-    <div class="day-card">
-      <h2 class="day-title">Day 1</h2>
+    <!-- 行程內容 -->
+    <div class="content">
 
-      <div class="item">
+      <div class="card">
         <div class="time">09:00</div>
-        <div class="content">出發前往機場</div>
+        <div class="place">麻六甲	馬六甲運河遊船</div>
+        <div class="note">需預訂行程</div>
       </div>
 
-      <div class="item">
-        <div class="time">13:30</div>
-        <div class="content">抵達飯店並辦理入住</div>
+      <div class="card">
+        <div class="time">13:00</div>
+        <div class="place">愛法摩沙水上世界 A’famosa Water World</div>
+        <div class="note">需預訂</div>
       </div>
-    </div>
-  </div>
-
-<div class="app">
-  
-  <!-- 分類選項 -->
-  <div class="tabs">
-    <div class="tab active">景點</div>
-    <div class="tab">美食</div>
-    <div class="tab">住宿</div>
-  </div>
-
-  <!-- 內容區 -->
-  <div class="content-area">
-
-    <div class="category active">
-      <!-- 景點內容 -->
-      麻六甲
-      馬六甲運河遊船
 
     </div>
 
-    <div class="category">
-      <!-- 美食內容 -->
-    </div>
-
-    <div class="category">
-      <!-- 住宿內容 -->
-      巴生	巴生阿克瑪溫德姆飯店
-
-    </div>
+    <!-- 新增按鈕 -->
+    <button class="add-btn">＋ 新增地點</button>
 
   </div>
 
-</div>
-
-  
 </body>
 </html>
 
 
+
 <style>
 body {
-  margin: 0;
+  background-color: #f6f5f3;
   font-family: sans-serif;
-  background-color: #f5efe9; /* 溫暖米色 */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-/* 整個 App 區域 */
 .app {
-  padding: 20px;
-}
-
-/* 一天的卡片 */
-.day-card {
+  width: 360px;
   background-color: #ffffff;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 20px;
 }
 
-/* Day 標題 */
-.day-title {
-  margin-top: 0;
+.header h1 {
+  font-size: 20px;
   margin-bottom: 16px;
 }
 
-/* 單一行程 */
-.item {
+.tabs {
   display: flex;
-  gap: 12px;
-  padding: 12px 0;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
-/* 時間 */
-.time {
-  color: #a07f5a;
-  font-weight: bold;
-  min-width: 60px;
+.tab {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 20px;
+  background-color: #eeeeee;
+  border: none;
+  color: #666;
 }
 
-/* 行程內容 */
+.tab.active {
+  background-color: #e8dcca;
+  color: #4a3b2a;
+}
+
 .content {
-  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-  /*未選取的按鈕樣式*/
-  .tab {
-  padding: 8px 16px;   /* 內距，讓它好點 */
-  border-radius: 20px; /* 圓一點 */
-  background-color: #f2f2f2;
-  color: #555;
+.card {
+  background-color: #faf9f7;
+  border-radius: 12px;
+  padding: 12px;
 }
 
-  
-/*選取時的按鈕樣式*/
-  .tab.active {
-  background-color: #ffcf9d;
-  color: #5a3a00;
+.time {
+  font-size: 12px;
+  color: #999;
 }
 
+.place {
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.note {
+  font-size: 13px;
+  color: #777;
+}
+
+.add-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: #d9cbb6;
+  color: #4a3b2a;
+}
 
 </style>
